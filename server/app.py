@@ -10,19 +10,15 @@ import os
 app = Flask(__name__)
 
 
-@app.route('/api', methods=['POST'])
+@app.route('/api', methods=['GET'])
 def api():
-    # get the prompt and config objects from the request
-    prompt = request.form['prompt']
-    config = request.form['config']
+    # get prompt, exception_msg from request
+    prompt = request.args.get('prompt')
+    exception_msg = request.args.get('exception_msg')
 
-
-    # prompt = request.form.get('prompt')
-    # config = request.form.get('config')
-    
     # make request to OpenAI API with prompt and config
     # return response from API to caller
-    final_prompt = handler(prompt, config)
+    return handler(prompt, exception_msg)
     
 
 if __name__ == '__main__':
