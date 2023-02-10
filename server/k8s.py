@@ -3,7 +3,7 @@ import yaml
 import openai
 import os 
 
-openai.api_key = os.getenv("OPENAI_API_KEY", "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")
+openai.api_key = os.getenv("OPENAI_API_KEY", "")
 
 def construct_prompt(query_str, config):
     prompt = f'''
