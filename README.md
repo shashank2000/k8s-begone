@@ -11,7 +11,7 @@ The server returns this command to the client - and the client execs the `kubect
 
 Recurse until we've found the problem.
 
-~~You'd have to specify a bunch of docker containers that you'd like a Kubernetes cluster, and a natural language description of what the nodes should look like, and it applies all the commands and generates all the configs necessary.
+~~You'd have to specify a bunch of docker containers that you'd like a Kubernetes cluster, and a natural language description of what the nodes should look like, and it applies all the commands and generates all the configs necessary.~~
 
-So this is a managed Kubernetes service. But not really. Because you're still very much running Kubernetes - think of this tool as an assistant.~~
+~~So this is a managed Kubernetes service. But not really. Because you're still very much running Kubernetes - think of this tool as an assistant.~~
 
