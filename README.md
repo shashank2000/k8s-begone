@@ -11,6 +11,17 @@ The server returns this command to the client - and the client execs the `kubect
 
 Recurse until we've found the problem.
 
+
+What would the ultimate k8s assistant look like?
+- you give it a design doc, and it makes all the config files, sets up permissions stuff (?), understands which application and which service corresponds to which container image
+- knows what limits to place on each container image through a reinforcement loop 
+
+
+But this is boiling the ocean
+
+Interpretability/latent saliency maps - https://arxiv.org/pdf/2210.13382.pdf
+
+
 ~~You'd have to specify a bunch of docker containers that you'd like a Kubernetes cluster, and a natural language description of what the nodes should look like, and it applies all the commands and generates all the configs necessary.~~
 
 ~~So this is a managed Kubernetes service. But not really. Because you're still very much running Kubernetes - think of this tool as an assistant.~~
