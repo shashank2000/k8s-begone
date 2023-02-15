@@ -19,7 +19,6 @@ def handler(prompt, config=None):
     prompt_str_words = unformatted_prompt.split()
     if len(prompt_str_words) > 2048:
         raise ValueError("Prompt is too long, must be less than 2048 words")
-    print(len(prompt_str_words))
     final_prompt = " ".join(prompt_str_words[:2048])
    
     completion = openai.Completion.create(

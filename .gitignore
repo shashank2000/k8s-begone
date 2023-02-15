@@ -2,3 +2,6 @@ venv/*
 kubeconfig/*
 *.pdf
 env.list
+*/build/*
+server/dist
+*.spec

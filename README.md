@@ -1,6 +1,18 @@
 # k8s-begone
-### By the end of the week this tool will be a kubectl plugin.
+### Update: we're now live on the krew package repository!
 
+## What is this
+`k8s-begone` is a free and open source `kubectl` plugin that helps you run natural language commands on your Kubernetes cluster. Example usage:
+
+`kubectl begone "get all pods in the namespace shashank"`
+
+Try it! It's as simple as running `krew install k8s-begone`, and you're off to the races!
+
+
+### Build from source 
+We build with `pyinstaller`. 
+
+## Longer explanation for long-term vision of the project
 Assuming your application logic is sound, most of Kubernetes debugging is a process of triage until you've isolated the problem. Broadly speaking, there's two possible debugging modes  - you can be debugging the cluster, or a specific application (defined as an issue with a Pod, ReplicaSet, Deployment or Service).
 
 Let's say your `pizza-delivery` pod is failing, and you're not sure why. Looking at the wonderful [Kubernetes docs](https://kubernetes.io/docs/tasks/debug/debug-application/debug-pods/#debugging-pods), we see step 1 is to diagnose the problem, and determine whether it is a problem with a pod, a ReplicationController, or a Service. 
@@ -17,7 +29,7 @@ What would the ultimate k8s assistant look like?
 - knows what limits to place on each container image through a reinforcement loop 
 
 
-But this is boiling the ocean
+But this is boiling the ocean - step 1 is to build a kubectl plugin that simply takes in natural language, and runs the appropriate command. It's that simple. 
 
 Interpretability/latent saliency maps - https://arxiv.org/pdf/2210.13382.pdf
 
